@@ -50,6 +50,7 @@ public class PopManager : MonoBehaviour
     {
         GameObject temp =ObjectPooler.Instance.SpawnFromPool("DestoyObject", obj.transform.position, Quaternion.identity);
         obj.SetActive(false);
+        temp.SetActive(true);
         yield return new WaitForSeconds(0.25f);
         temp.SetActive(false);
 
